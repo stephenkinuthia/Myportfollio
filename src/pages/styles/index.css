@@ -1,0 +1,205 @@
+/* Main Section Styles */
+.main-home {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Introduction Section */
+.home-description {
+  flex: 1;
+  padding: 20px;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 3rem;
+  max-width: 30rem;
+  color: rgb(253, 253, 253);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 1s ease forwards;
+}
+
+.heading span {
+  color: #f5dd04;
+  animation: colorPulse 2.5s ease-in-out infinite alternate;
+}
+
+.paragraph {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1s;
+}
+
+/* Animations */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorPulse {
+  0% {
+    color: #f5dd04;
+    text-shadow: 0 0 4px #f5dd04;
+  }
+  100% {
+    color: #fff867;
+    text-shadow: 0 0 10px #fff867;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.book-now-button{
+  background-color: #f9c803;
+  margin-right: 10px;
+}
+
+.my-Cv{
+  border: 2px solid blue;
+}
+
+/* My Picture Section */
+.my-picture {
+  flex: 1;
+  position: relative;
+  height: 100vh;
+  background-image: url('src/assets/front.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.social-media-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 15px;
+  z-index: 1000;
+}
+
+.icons {
+  width: 40px;
+  height: 40px;
+  background-color: #f9c803;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.icons img {
+  width: 70%;
+  height: auto;
+}
+
+.icons:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(248, 245, 245, 0.4);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .paragraph {
+    font-size: 1.1rem;
+  }
+
+  .social-media-icon {
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-home {
+    display: flex;
+    flex-direction: column; /* Change to column layout */
+  }
+
+  .home-description {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .my-picture {
+    flex: 1;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .social-media-icon {
+    position: absolute;
+    right: 20px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .paragraph {
+    font-size: 0.9rem;
+  }
+
+  .social-media-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .icons {
+    width: 30px;
+    height: 30px;
+  }
+}
