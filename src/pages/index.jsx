@@ -1,6 +1,6 @@
 import Button from './components/button';
 import './styles/index.css'; // Assuming you have a CSS file for styles
-
+ import myFacebookimage from '../assets/icons/images/facebook.png';
 function Home() {
 
   return (
@@ -33,7 +33,7 @@ function Home() {
         <div className="overlay">
           <div className="social-media-icon">
             <div className="icons">
-              <img src='/src/assets/icons/facebook.png' alt='facebook' />
+              <img src={myFacebookimage} alt='facebook' />
             </div>
             <div className="icons">
               <img src='/src/assets/icons/instagram.png' alt='instagram' />
